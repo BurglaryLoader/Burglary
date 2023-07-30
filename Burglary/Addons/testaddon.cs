@@ -8,15 +8,15 @@ using Burglary.Addons.Attributes;
 using Burglary.Addons;
 using System.Threading;
 
-namespace Burglary.Addons
-{
-    [Priority(0)]
-    [AddonData("CrashAlert", "Description", "joeswanson.")]
-    public class testaddon : Addon
-    {
-        public override void OnAlert(AiBrain brain)
-        {
-            while (true) Thread.Sleep(int.MaxValue);
-        }
-    }
-}
+//namespace Burglary.Addons
+//{
+//    [Priority(0)]
+//    [AddonData("CrashAlert", "Description", "joeswanson.")]
+//    public class testaddon : Addon
+//    {
+//        public override void OnAlert(AiBrain brain)
+//        {
+//            while (true) Thread.Sleep(int.MaxValue);
+//        }
+//    }
+//}
