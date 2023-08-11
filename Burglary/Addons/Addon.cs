@@ -30,7 +30,11 @@ namespace Burglary.Addons
         //        return LOGGER;
         //    } private set { LOGGER = value; }
         //}
-
+        public static Addon Instance { get; private set; }
+        public Addon()
+        {
+            Instance = this;
+        }
         public void Log(string message)
         {
             ct.Ensure();

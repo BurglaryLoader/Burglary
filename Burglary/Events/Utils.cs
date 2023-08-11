@@ -19,56 +19,88 @@ namespace Burglary.Events
             {
                 foreach (Addon addon in BurglaryMain.Addons)
                 {
-                    addon.OnSceneLoad(scene);
+                    try
+                    {
+                        addon.OnSceneLoad(scene);
+                    }
+                    catch { }
                 }
             }
-            public static void scenechange(Scene before,Scene after)
+            public static void scenechange(Scene before, Scene after)
             {
                 foreach (Addon addon in BurglaryMain.Addons)
                 {
-                    addon.OnSceneChanged(before,after);
+                    try
+                    {
+                        addon.OnSceneChanged(before, after);
+                    }
+                    catch { }
                 }
             }
             public static void sceneunload(Scene scene)
             {
                 foreach (Addon addon in BurglaryMain.Addons)
                 {
-                    addon.OnSceneUnload(scene);
+                    try
+                    {
+                        addon.OnSceneUnload(scene);
+                    }
+                    catch { }
                 }
             }
             public static void OnGUI()
             {
                 foreach (Addon addon in BurglaryMain.Addons)
                 {
-                    addon.OnGUI();
+                    try
+                    {
+                        addon.OnGUI();
+                    }
+                    catch { }
                 }
             }
             public static void update()
             {
                 foreach (Addon addon in BurglaryMain.Addons)
                 {
-                    addon.OnUpdate();
+                    try
+                    {
+                        addon.OnUpdate();
+                    }
+                    catch { }
                 }
             }
             public static void fixedupdate()
             {
                 foreach (Addon addon in BurglaryMain.Addons)
                 {
-                    addon.OnFixedUpdate();
+                    try
+                    {
+                        addon.OnFixedUpdate();
+                    }
+                    catch { }
                 }
             }
             public static void lateupdate()
             {
                 foreach (Addon addon in BurglaryMain.Addons)
                 {
-                    addon.OnLateUpdate();
+                    try
+                    {
+                        addon.OnLateUpdate();
+                    }
+                    catch { }
                 }
             }
             public static void burgunload()
             {
                 foreach (Addon addon in BurglaryMain.Addons)
                 {
-                    addon.OnBurglaryUnload();
+                    try
+                    {
+                        addon.OnBurglaryUnload();
+                    }
+                    catch { }
                 }
             }
         }
